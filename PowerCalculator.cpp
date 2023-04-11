@@ -26,7 +26,7 @@ int main() {
     else if (exponent == 1) // 어떠한 경우에도 자기 자신을 출력합니다.
         cout << "Power of number using recursive method: " << base;
 
-    else if (base == 0) { // 몫이 0인 경우,
+    else if (base == 0) { // 밑이 0인 경우,
 
         if (exponent < 0) // 0을 나누는 것은 불가합니다.
             cout << "Cannot calculate";
