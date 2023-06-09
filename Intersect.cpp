@@ -14,9 +14,9 @@ public:
 	~straightLine() {};
 
 	void Display() {
-		
+
 		cout << "f(x) = " << m << "x + " << n << endl;
-	
+
 	};
 
 	friend void Intersect(straightLine, quadratic);
@@ -76,19 +76,19 @@ void Intersect(straightLine A, quadratic B) {
 		cout << "There is one answer. That means f(x) is tangent line of g(x).\n";
 		double xpoint = -newb / 2 * newa;
 		double ypoint = A.m * xpoint + A.n;
-		cout << "The point is (" << xpoint << " , " << ypoint << " )\n";
+		cout << "The point is (" << xpoint << " , " << ypoint << ")\n";
 
 	}
 
 	else {
 
 		cout << "There are two answers.\n";
-		double xpoint1 = -newb + sqrt(newb * newb - 4 * newa * newc) / 2 * newa;
-		double xpoint2 = -newb - sqrt(newb * newb - 4 * newa * newc) / 2 * newa;
+		double xpoint1 = (-newb + sqrt(newb * newb - 4 * newa * newc)) / 2 * newa;
+		double xpoint2 = (-newb - sqrt(newb * newb - 4 * newa * newc)) / 2 * newa;
 		double ypoint1 = A.m * xpoint1 + A.n;
 		double ypoint2 = A.m * xpoint2 + A.n;
-		cout << "The first point is (" << xpoint1 << " , " << ypoint1 << " )\n";
-		cout << "The second point is(" << xpoint2 << ", " << ypoint2 << ")\n";
+		cout << "The first point is (" << xpoint1 << " , " << ypoint1 << ")\n";
+		cout << "The second point is (" << xpoint2 << " , " << ypoint2 << ")\n";
 	}
 
 
