@@ -19,7 +19,7 @@ public:
 	
 	};
 
-	friend void Intercept(straightLine, quadratic);
+	friend void Intersect(straightLine, quadratic);
 
 };
 
@@ -45,7 +45,7 @@ public:
 
 	};
 
-	friend void Intercept(straightLine, quadratic);
+	friend void Intersect(straightLine, quadratic);
 
 
 
@@ -57,7 +57,7 @@ quadratic::quadratic(double k, double s, double l) {
 	c = l;
 }
 
-void Intercept(straightLine A, quadratic B) {
+void Intersect(straightLine A, quadratic B) {
 
 	A.Display();
 	B.Display();
@@ -66,14 +66,14 @@ void Intercept(straightLine A, quadratic B) {
 
 	double newa = B.a, newb = B.b - A.m, newc = B.c - A.n;
 
-	cout << "Intercept point between two functions is the answer of " << newa << "x^2 + " << newb << "x + " << newc << " = 0.\n";
+	cout << "Intersection point between two functions is the answer of " << newa << "x^2 + " << newb << "x + " << newc << " = 0.\n";
 
 	if (newb * newb - 4 * newa * newc < 0)
-		cout << "There is no answer. Therefore, there is no intercept point between f(x) and g(x).\n";
+		cout << "There is no answer. Therefore, there is no intersection point between f(x) and g(x).\n";
 
 	else if (newb * newb - 4 * newa * newc == 0) {
 
-		cout << "There is one answer. That means f(x) is tangent from g(x).\n";
+		cout << "There is one answer. That means f(x) is tangent line of g(x).\n";
 		double xpoint = -newb / 2 * newa;
 		double ypoint = A.m * xpoint + A.n;
 		cout << "The point is (" << xpoint << " , " << ypoint << " )\n";
@@ -112,6 +112,6 @@ int main() {
 
 	cout << "-------------------\n-------------------\n";
 
-	Intercept(f, g);
+	Intersect(f, g);
 
 }
